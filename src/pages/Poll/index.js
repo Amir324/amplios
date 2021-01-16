@@ -22,7 +22,7 @@ const Poll = ({ onGetWidgets, question, onSaveAnswer, polls }) => {
   const user = useSelector((state) => state.user?.username);
   useEffect(() => {
     onGetWidgets(id);
-  }, [onGetWidgets]);
+  }, [onGetWidgets, id]);
 
   const onSubmit = (result) => {
     onSaveAnswer(result);
