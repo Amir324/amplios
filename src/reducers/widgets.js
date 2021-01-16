@@ -33,7 +33,6 @@ const initialState = {
   inEditWidget: WIDGET_INIT_STATE,
   allChoices: allChoicesSaved,
   allQuestions: allQuestionsSaved,
-  error: null,
 };
 
 export default function widgetsReducer(state = initialState, action) {

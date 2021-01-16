@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  display: flex;
   cursor: pointer;
   padding: 10px;
   border-radius: 10px;
-  width: 160px;
+  width: 300px;
   
     &:hover {
     background-color: #f3f3f3;
   }
-  background-color: ${({selectedWidgetId, id}) => selectedWidgetId === id ? "#f3f3f3" : "#ffffff"};
+  background-color: ${({selectedWidgetId, id}) => selectedWidgetId === id ? "#f3f3f3" : "#edfaff"};
   margin-bottom: 10px;
 `;
 
@@ -34,4 +35,5 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-left: auto;
 `;

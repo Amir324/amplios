@@ -12,7 +12,6 @@ const WidgetListItem = ({ id, name, onSelect, onDelete }) => {
       id={id}
       onClick={() => onSelect(id)}
     >
-
       <WidgetName>{name}</WidgetName>
       <Wrapper>
         <SmallButton

@@ -24,4 +24,6 @@ export const Result = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-export const Column = styled.div``;
+export const Column = styled.div`
+width: 33%;
+`;

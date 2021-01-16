@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useCallback} from "react";
 import { connect } from "react-redux";
 import {
   createWidget,
@@ -32,6 +32,7 @@ const Home = ({
   onCreateWidget,
   user,
 }) => {
+
   const onCreateHandler = () => {
     onShowModal(true);
     onCreateWidget();

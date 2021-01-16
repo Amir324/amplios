@@ -56,11 +56,12 @@ const WidgetEdit = ({
   };
 
   const validatePoll = () => {
-    let validChoices = inEditWidget.choices.length > 1;
-    let validName = inEditWidget.name;
-    let validQuestion = inEditWidget.question;
+    let validChoicesAmount = inEditWidget?.choices?.length > 1
+    let validChoicesValue = inEditWidget?.choices?.every(c => c?.answer?.length > 0)
+    let validName = inEditWidget?.name;
+    let validQuestion = inEditWidget?.question;
 
-    return validChoices && validName && validQuestion;
+    return validChoicesAmount && validChoicesValue && validName && validQuestion;
   };
 
   const addKeyValueRow = () => {
