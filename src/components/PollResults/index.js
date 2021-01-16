@@ -34,7 +34,7 @@ const PollResults = ({ data = [], id }) => {
       <Title>Results </Title>
       {Object.entries(countEachAnswer()).map(([k, v]) => {
         return (
-          <ResultsWrapper>
+          <ResultsWrapper key={k}>
             <Result>
               <Column>
                 <Choice>{allChoices[k]}</Choice>
