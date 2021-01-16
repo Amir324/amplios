@@ -22,9 +22,11 @@ const WidgetDetails = ({
 
   return (
     <Container>
+      {preview && (
         <Row>
-            <Label>Poll preview</Label>
+          <Label>Poll preview</Label>
         </Row>
+      )}
       <Row>
         <Label>id</Label>
         <span>{questionId}</span>
