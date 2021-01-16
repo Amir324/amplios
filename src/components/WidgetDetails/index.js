@@ -22,12 +22,15 @@ const WidgetDetails = ({
 
   return (
     <Container>
+        <Row>
+            <Label>Poll preview</Label>
+        </Row>
       <Row>
         <Label>id</Label>
         <span>{questionId}</span>
       </Row>
       <Row>
-        <Label>Link</Label>
+        <Label>Link (follow the link to vote)</Label>
         <Link to={`/poll/${questionId}`}>
           <Icon src={linkIcon} alt="" />
         </Link>

@@ -12,9 +12,9 @@ export const EDIT_WIDGET = "EDIT_WIDGET";
 
 export const UPDATE_IN_EDIT_WIDGET = "UPDATE_IN_EDIT_WIDGET"
 
-export const ADD_KEY_VALUE_ROW = "ADD_KEY_VALUE_ROW"
+export const ADD_ANSWER_OPTION = "ADD_ANSWER_OPTION"
 
-export const DELETE_KEY_VALUE_ROW = "DELETE_KEY_VALUE_ROW"
+export const DELETE_ANSWER_OPTION = "DELETE_ANSWER_OPTION"
 
 export const WIDGET = {
     id: "id",

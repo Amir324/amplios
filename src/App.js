@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import Home from "./pages/Home";
+import Poll from "./pages/Poll";
 import NoMatch from "./pages/NoMatch";
 
 import store from "./store";
 import GlobalStyle from "./globalStyles";
-import Poll from "./pages/Poll";
+
 
 function App() {
   return (

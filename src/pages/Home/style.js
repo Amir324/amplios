@@ -4,7 +4,7 @@ export const Container = styled.div``;
 
 export const InnerContainer = styled.div`
   position: relative;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   background-color: #ffffff;
   padding: 20px;

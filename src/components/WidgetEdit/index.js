@@ -7,27 +7,29 @@ import {
   selectWidget,
   updateInEditWidget,
   saveWidget,
+  addAnswerOptionInEditWidget,
+  deleteAnswerOptionToInEditWidget,
 } from "../../actions/widgets";
 import { showModal } from "../../actions/ui";
 import { Button } from "../Button";
 import { Input } from "../Input";
 import { SmallButton } from "../SmallButton";
 import { WIDGET } from "../../constants/widgets";
-import {Error, Label, Row} from "./style";
+import { Error, Label, Row } from "./style";
 
 const WidgetEdit = ({
   inEditWidget,
   onUpdateWidget,
   onUpdateInEditWidget,
   onShowModal,
-  onAddKeyValueRowToInEditWidget,
-  onDeleteKeyValueRowToInEditWidget,
+  onAddAnswerOption,
+  onDeleteAnswerOption,
   user,
 }) => {
   const [error, setError] = useState(null);
 
   const onChangeHandler = (e, i) => {
-    setError(null)
+    setError(null);
     const cloneInEditWidget = _.cloneDeep(inEditWidget);
 
     cloneInEditWidget.user = user;
@@ -56,20 +58,24 @@ const WidgetEdit = ({
   };
 
   const validatePoll = () => {
-    let validChoicesAmount = inEditWidget?.choices?.length > 1
-    let validChoicesValue = inEditWidget?.choices?.every(c => c?.answer?.length > 0)
+    let validChoicesAmount = inEditWidget?.choices?.length > 1;
+    let validChoicesValue = inEditWidget?.choices?.every(
+      (c) => c?.answer?.length > 0
+    );
     let validName = inEditWidget?.name;
     let validQuestion = inEditWidget?.question;
 
-    return validChoicesAmount && validChoicesValue && validName && validQuestion;
+    return (
+      validChoicesAmount && validChoicesValue && validName && validQuestion
+    );
   };
 
   const addKeyValueRow = () => {
-    onAddKeyValueRowToInEditWidget();
+    onAddAnswerOption();
   };
 
   const deleteKeyValueRow = (index) => {
-    onDeleteKeyValueRowToInEditWidget(index);
+    onDeleteAnswerOption(index);
   };
 
   return (
@@ -120,8 +126,8 @@ const mapDispatchToProps = {
   onUpdateInEditWidget: updateInEditWidget,
   onShowModal: showModal,
   onSelectWidget: selectWidget,
-  onAddKeyValueRowToInEditWidget: addKeyValueRowToInEditWidget,
-  onDeleteKeyValueRowToInEditWidget: deleteKeyValueRowToInEditWidget,
+  onAddAnswerOption: addAnswerOptionInEditWidget,
+  onDeleteAnswerOption: deleteAnswerOptionToInEditWidget,
 };
 
 const mapStateToProps = (state) => ({

@@ -8,10 +8,8 @@ import {
   GET_WIDGETS,
   SELECT_WIDGET,
   UPDATE_IN_EDIT_WIDGET,
-  ADD_KEY_VALUE_ROW,
-  DELETE_KEY_VALUE_ROW,
   SAVE_WIDGET,
-  WIDGET,
+  WIDGET, ADD_ANSWER_OPTION, DELETE_ANSWER_OPTION,
 } from "../constants/widgets";
 import { loadFromLocalStorage } from "../utils/utils";
 
@@ -132,7 +130,7 @@ export default function widgetsReducer(state = initialState, action) {
       };
     }
 
-    case ADD_KEY_VALUE_ROW: {
+    case ADD_ANSWER_OPTION: {
       let newKeyValuePairs = [
         ...state.inEditWidget.choices,
         { [WIDGET.answer]: "" },
@@ -149,7 +147,7 @@ export default function widgetsReducer(state = initialState, action) {
       };
     }
 
-    case DELETE_KEY_VALUE_ROW: {
+    case DELETE_ANSWER_OPTION: {
       let index = action?.index;
       let newKeyValuePairs = state?.inEditWidget?.choices?.filter(
         (_, _index) => !(_index === index)

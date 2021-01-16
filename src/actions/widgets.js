@@ -5,9 +5,7 @@ import {
   GET_WIDGETS,
   SELECT_WIDGET,
   UPDATE_IN_EDIT_WIDGET,
-  DELETE_KEY_VALUE_ROW,
-  ADD_KEY_VALUE_ROW,
-  SAVE_WIDGET,
+  SAVE_WIDGET, ADD_ANSWER_OPTION, DELETE_ANSWER_OPTION,
 } from "../constants/widgets";
 
 export const getWidgets = (id) => {
@@ -59,15 +57,15 @@ export const updateInEditWidget = (widget) => {
   };
 };
 
-export const addKeyValueRowToInEditWidget = () => {
+export const addAnswerOptionInEditWidget = () => {
   return {
-    type: ADD_KEY_VALUE_ROW,
+    type: ADD_ANSWER_OPTION,
   };
 };
 
-export const deleteKeyValueRowToInEditWidget = (index) => {
+export const deleteAnswerOptionToInEditWidget = (index) => {
   return {
-    type: DELETE_KEY_VALUE_ROW,
+    type: DELETE_ANSWER_OPTION,
     index,
   };
 };
